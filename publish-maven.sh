@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-REMOTE_URL="git@github.com:shuijingli234/maven-repo.git"
+REMOTE_URL="git@github.com:shuijingli234/composeDemoMaven.git"
 BRANCH="gh-pages"
 REPO_DIR="mavenPublishTestSDK/build/repo"
 
@@ -43,5 +43,5 @@ git push -f origin "$BRANCH"
 echo ""
 echo "========================================"
 echo "Published successfully!"
-echo "Maven URL: https://shuijingli234.github.io/maven-repo/"
+echo "Maven URL: https://shuijingli234.github.io/composeDemoMaven/"
 echo "========================================"

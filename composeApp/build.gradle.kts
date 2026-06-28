@@ -43,7 +43,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtimeCompose)
-            implementation("org.example.project:maven-publish-test-sdk:1.0.3-fork")
+            implementation("org.example.project:maven-publish-test-sdk:1.0.4-fork")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

@@ -1,10 +1,26 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     `maven-publish`
+}
+
+// 加载 local.properties（优先级高于 gradle.properties，且不进入 git）
+val localProps = Properties().apply {
+    val file = rootProject.file("local.properties")
+    if (file.exists()) {
+        load(file.inputStream())
+    }
+}
+
+fun resolveProperty(key: String, envVar: String = ""): String {
+    return localProps.getProperty(key)
+        ?: (project.findProperty(key) as? String)
+        ?: (if (envVar.isNotBlank()) System.getenv(envVar) else null)
+        ?: ""
 }
 
 kotlin {
@@ -45,7 +61,7 @@ android {
 
 val sdkGroupId = "org.example.project"
 val sdkArtifactId = "maven-publish-test-sdk"
-val sdkVersion = "1.0.3-fork"
+val sdkVersion = "1.0.4-fork"
 
 group = sdkGroupId
 version = sdkVersion
@@ -56,14 +72,14 @@ publishing {
             name = "GitHubPages"
             url = uri(layout.buildDirectory.dir("repo"))
         }
-        val aliyunUrl = project.findProperty("aliyun.repo.url") as String?
-        if (!aliyunUrl.isNullOrBlank()) {
+        val aliyunUrl = resolveProperty("aliyun.repo.url")
+        if (aliyunUrl.isNotBlank()) {
             maven {
                 name = "Aliyun"
                 url = uri(aliyunUrl)
                 credentials {
-                    username = project.findProperty("aliyun.user") as String? ?: ""
-                    password = project.findProperty("aliyun.password") as String? ?: ""
+                    username = resolveProperty("aliyun.user")
+                    password = resolveProperty("aliyun.password")
                 }
             }
         }
@@ -71,14 +87,14 @@ publishing {
 }
 
 afterEvaluate {
-    val gprUser = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_USER")
-    val gprKey = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
-    if (!gprUser.isNullOrBlank() && !gprKey.isNullOrBlank()) {
+    val gprUser = resolveProperty("gpr.user", "GITHUB_USER")
+    val gprKey = resolveProperty("gpr.key", "GITHUB_TOKEN")
+    if (gprUser.isNotBlank() && gprKey.isNotBlank()) {
         publishing {
             repositories {
                 maven {
                     name = "GitHubPackages"
-                    url = uri("https://maven.pkg.github.com/shuijingli234/composeDemoAndroidiOS")
+                    url = uri("https://maven.pkg.github.com/shuijingli234/composeDemoMaven")
                     credentials {
                         username = gprUser
                         password = gprKey
@@ -103,7 +119,7 @@ tasks.register<Exec>("publishToGitHubPages") {
     commandLine(rootProject.file("publish-maven.sh").absolutePath, "--skip-publish")
 }
 
-if (!(project.findProperty("gpr.user") as String?).isNullOrBlank() || !System.getenv("GITHUB_USER").isNullOrBlank()) {
+if (resolveProperty("gpr.user", "GITHUB_USER").isNotBlank()) {
     tasks.register("publishToGitHubPackages") {
         group = "publishing"
         description = "Publish Maven artifacts to GitHub Packages"
@@ -111,7 +127,7 @@ if (!(project.findProperty("gpr.user") as String?).isNullOrBlank() || !System.ge
     }
 }
 
-if (!(project.findProperty("aliyun.repo.url") as String?).isNullOrBlank()) {
+if (resolveProperty("aliyun.repo.url").isNotBlank()) {
     tasks.register("publishToAliyun") {
         group = "publishing"
         description = "Publish Maven artifacts to Aliyun Package Repository"
@@ -131,7 +147,7 @@ afterEvaluate {
             pom {
                 name.set(sdkArtifactId)
                 description.set("A simple test SDK for Maven publishing demo")
-                url.set("https://github.com/shuijingli234/composeDemoAndroidiOS")
+                url.set("https://github.com/shuijingli234/composeDemoMaven")
                 licenses {
                     license {
                         name.set("MIT")
