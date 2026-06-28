@@ -18,6 +18,9 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import composedemoandroidios.composeapp.generated.resources.Res
 import composedemoandroidios.composeapp.generated.resources.compose_multiplatform
 
+import org.example.sdk.SimpleSdk
+import org.example.sdk.getSdkVersion
+
 @Composable
 @Preview
 fun App() {
@@ -37,6 +40,8 @@ fun App() {
                 Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
                     Text("Compose: $greeting")
+                    val sdk = remember { SimpleSdk() }
+                    Text("SDK: ${sdk.hello()} v${getSdkVersion()}")
                 }
             }
         }
