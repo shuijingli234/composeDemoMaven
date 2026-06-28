@@ -20,6 +20,9 @@ import composedemoandroidios.composeapp.generated.resources.compose_multiplatfor
 
 import org.example.sdk.SimpleSdk
 import org.example.sdk.getSdkVersion
+import kotlinx.datetime.Clock
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.toLocalDateTime
 
 @Composable
 @Preview
@@ -37,11 +40,13 @@ fun App() {
             }
             AnimatedVisibility(showContent) {
                 val greeting = remember { Greeting().greet() }
+                val now = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
                 Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
                     Text("Compose: $greeting")
                     val sdk = remember { SimpleSdk() }
                     Text("SDK: ${sdk.hello()} v${getSdkVersion()}")
+                    Text("DateTime: $now")
                 }
             }
         }
