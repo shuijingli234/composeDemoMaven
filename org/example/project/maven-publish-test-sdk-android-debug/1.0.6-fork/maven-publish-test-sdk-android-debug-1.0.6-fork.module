@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../maven-publish-test-sdk/1.0.6-fork/maven-publish-test-sdk-1.0.6-fork.module",
+    "group": "org.example.project",
+    "module": "maven-publish-test-sdk",
+    "version": "1.0.6-fork",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "debugApiElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mavenPublishTestSDK-debug.aar",
+          "url": "maven-publish-test-sdk-android-debug-1.0.6-fork.aar",
+          "size": 2559,
+          "sha512": "9551b75988932658c12d8509aeb1186fc6a8d3ec7552b491705550a797cf8e188b99539dfc3108d0c8f11e44859f1450f2304dec39de8c955cf9b909f7202b4a",
+          "sha256": "303d2fc2baae1de44fe44f73763512657f8575d7020fc15cf909ae9bfb9188b0",
+          "sha1": "fe01aea60494e4aa456de813a9eda7a6cefbddbc",
+          "md5": "5da3e27b891945a088dab3b81ebc4f82"
+        }
+      ]
+    },
+    {
+      "name": "debugRuntimeElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.0"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-common"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-test-annotations-common"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "mavenPublishTestSDK-debug.aar",
+          "url": "maven-publish-test-sdk-android-debug-1.0.6-fork.aar",
+          "size": 2559,
+          "sha512": "9551b75988932658c12d8509aeb1186fc6a8d3ec7552b491705550a797cf8e188b99539dfc3108d0c8f11e44859f1450f2304dec39de8c955cf9b909f7202b4a",
+          "sha256": "303d2fc2baae1de44fe44f73763512657f8575d7020fc15cf909ae9bfb9188b0",
+          "sha1": "fe01aea60494e4aa456de813a9eda7a6cefbddbc",
+          "md5": "5da3e27b891945a088dab3b81ebc4f82"
+        }
+      ]
+    },
+    {
+      "name": "debugSourcesElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "files": [
+        {
+          "name": "mavenPublishTestSDK-android-debug-1.0.6-fork-sources.jar",
+          "url": "maven-publish-test-sdk-android-debug-1.0.6-fork-sources.jar",
+          "size": 1947,
+          "sha512": "38a8a89f28a55b82b05265a4a0687c9a110e1527eb0849654522b8c8a2c65abbfc770fb500f00e67c2428f189c67ba3da8a87a89b032508c362eff4014cc9208",
+          "sha256": "54f8b437e743870418b15d357349896623815683265611d8dc477edf8430533d",
+          "sha1": "c1cca35748dcc6db8223708e39000ce8cb21633c",
+          "md5": "c6058fef3005915780b780b46811e944"
+        }
+      ]
+    }
+  ]
+}

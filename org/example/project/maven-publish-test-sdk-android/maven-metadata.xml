@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.example.project</groupId>
+  <artifactId>maven-publish-test-sdk-android</artifactId>
+  <versioning>
+    <latest>1.0.6-fork</latest>
+    <release>1.0.6-fork</release>
+    <versions>
+      <version>1.0.6-fork</version>
+    </versions>
+    <lastUpdated>20260628092607</lastUpdated>
+  </versioning>
+</metadata>

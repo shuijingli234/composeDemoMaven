@@ -1,0 +1,324 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.example.project",
+    "module": "maven-publish-test-sdk",
+    "version": "1.0.6-fork",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mavenPublishTestSDK-metadata-1.0.6-fork.jar",
+          "url": "maven-publish-test-sdk-1.0.6-fork.jar",
+          "size": 2650,
+          "sha512": "4aad2acc9f43352524f4c12e0d09531e25bcd00fdf9aeb119a86f82308c550ce51359fcd7849bf673c575ab560b94bc312f7c9f96f8e482344f075a9baaa873c",
+          "sha256": "71a5aa2b1d82eb2bcf871a97ab742d89755923f283af2a0bd8266af5742fc9d6",
+          "sha1": "2623a620d0721eb451e02afb77780d9e87194ba4",
+          "md5": "0ac806f5f9e620040832dabb14f8f8ff"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "mavenPublishTestSDK-kotlin-1.0.6-fork-sources.jar",
+          "url": "maven-publish-test-sdk-1.0.6-fork-sources.jar",
+          "size": 1943,
+          "sha512": "9b187346dd7601cd32b992865a12490650d69e5dc9754faeb83a7cc34671af501ce95dcaeb778d1f5c188e9f696b38679d80893849f00877efb706d2698391f4",
+          "sha256": "985276d14953074b29098526eb596d8ab4200db56e0fc2c600c13ee97ee4045a",
+          "sha1": "1ba5edf5e51aca9dc58d1cced0ed7e763839b595",
+          "md5": "1be966a53b977171b9517fd59fc198ce"
+        }
+      ]
+    },
+    {
+      "name": "debugApiElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-android-debug/1.0.6-fork/maven-publish-test-sdk-android-debug-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-android-debug",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "debugRuntimeElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-android-debug/1.0.6-fork/maven-publish-test-sdk-android-debug-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-android-debug",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "debugSourcesElements-published",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-android-debug/1.0.6-fork/maven-publish-test-sdk-android-debug-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-android-debug",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-android/1.0.6-fork/maven-publish-test-sdk-android-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-android",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-android/1.0.6-fork/maven-publish-test-sdk-android-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-android",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-android/1.0.6-fork/maven-publish-test-sdk-android-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-android",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-iosarm64/1.0.6-fork/maven-publish-test-sdk-iosarm64-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-iosarm64",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-iosarm64/1.0.6-fork/maven-publish-test-sdk-iosarm64-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-iosarm64",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-iosarm64/1.0.6-fork/maven-publish-test-sdk-iosarm64-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-iosarm64",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-iossimulatorarm64/1.0.6-fork/maven-publish-test-sdk-iossimulatorarm64-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-iossimulatorarm64",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-iossimulatorarm64/1.0.6-fork/maven-publish-test-sdk-iossimulatorarm64-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-iossimulatorarm64",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-iossimulatorarm64/1.0.6-fork/maven-publish-test-sdk-iossimulatorarm64-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-iossimulatorarm64",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-iosx64/1.0.6-fork/maven-publish-test-sdk-iosx64-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-iosx64",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "iosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-iosx64/1.0.6-fork/maven-publish-test-sdk-iosx64-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-iosx64",
+        "version": "1.0.6-fork"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../maven-publish-test-sdk-iosx64/1.0.6-fork/maven-publish-test-sdk-iosx64-1.0.6-fork.module",
+        "group": "org.example.project",
+        "module": "maven-publish-test-sdk-iosx64",
+        "version": "1.0.6-fork"
+      }
+    }
+  ]
+}
