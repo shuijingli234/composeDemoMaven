@@ -119,22 +119,6 @@ tasks.register<Exec>("publishToGitHubPages") {
     commandLine(rootProject.file("publish-maven.sh").absolutePath, "--skip-publish")
 }
 
-if (resolveProperty("gpr.user", "GITHUB_USER").isNotBlank()) {
-    tasks.register("publishToGitHubPackages") {
-        group = "publishing"
-        description = "Publish Maven artifacts to GitHub Packages"
-        dependsOn("publishAllPublicationsToGitHubPackagesRepository")
-    }
-}
-
-if (resolveProperty("aliyun.repo.url").isNotBlank()) {
-    tasks.register("publishToAliyun") {
-        group = "publishing"
-        description = "Publish Maven artifacts to Aliyun Package Repository"
-        dependsOn("publishAllPublicationsToAliyunRepository")
-    }
-}
-
 afterEvaluate {
     publishing {
         publications.withType<MavenPublication> {
