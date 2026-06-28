@@ -61,7 +61,7 @@ android {
 
 val sdkGroupId = "org.example.project"
 val sdkArtifactId = "maven-publish-test-sdk"
-val sdkVersion = "1.0.4-fork"
+val sdkVersion = "1.0.5-fork"
 
 group = sdkGroupId
 version = sdkVersion
