@@ -50,18 +50,15 @@ dependencyResolutionManagement {
             }
         }
 
-        // 方式三：阿里云制品仓库（需要凭据）
-        // val aliyunRepoUrl = propertyOrEnv("aliyun.repo.url")
-        // if (aliyunRepoUrl.isNotBlank()) {
-        //     maven {
-        //         name = "Aliyun"
-        //         url = uri(aliyunRepoUrl)
-        //         credentials {
-        //             username = propertyOrEnv("aliyun.user")
-        //             password = propertyOrEnv("aliyun.password")
-        //         }
-        //     }
-        // }
+        // 方式三：阿里云制品仓库（只读凭据，可公开）
+        maven {
+            name = "Aliyun"
+            url = uri("https://test4567-cn-shanghai.devops.aliyuncs.com/packages/api/protocol/maven/1570-release-u2vlht")
+            credentials {
+                username = "22a41f6d-5a4b-4d26-90e6-4b81440d49bf"
+                password = "RORZebX1oaxI"
+            }
+        }
 
         // 方式四：GitHub Pages（静态站点，无需认证）
         // maven {
